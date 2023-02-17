@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Imagem from './imagem';
+import Imagem from '../imgsoftex/imagem';
 
 import "./styles.css";
 

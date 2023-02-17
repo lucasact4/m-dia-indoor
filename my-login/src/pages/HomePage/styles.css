@@ -1,0 +1,79 @@
+* {
+  color: white;
+}
+
+#homepage {
+  min-height: 100vh;
+}
+
+#homepage .header {
+  min-width: 100vh;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#homepage .space {
+  margin: auto;
+  max-width: 1000px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.space .logo {
+  padding-top: 3.5px;
+}
+
+.space .title h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0px;
+}
+
+.space .options {
+  cursor: pointer;
+}
+
+.space .options ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2px;
+  list-style-type: none;
+  margin: 0px;
+}
+
+.space .options ul li {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 14px;
+}
+
+.space .logout button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: white;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition-timing-function: ease;
+  transition: 0.3s;
+  margin: 0.1rem;
+  outline: none;
+}
+
+.space .logout button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 5.2rem;
+  height: 2.2rem;
+  margin: 0rem;
+}
+
+.space .logout button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 5.2rem;
+  height: 2.2rem;
+  margin: 0rem;
+}
