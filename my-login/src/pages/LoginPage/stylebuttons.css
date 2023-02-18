@@ -1,0 +1,49 @@
+.sessionstatus {
+  margin: 10px;
+}
+
+#onsession .tittleon, #offsession .tittleoff {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+#offsession {
+  margin: 18.7px;
+}
+
+#onsession .buttons {
+  display: flex;
+}
+
+#onsession .buttons button {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  border-radius: 4px;
+  color: white;
+  width: 4.5rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition-timing-function: ease;
+  transition: 0.3s;
+  margin: 0.1rem;
+  outline: none;
+}
+
+#onsession .buttons button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 4.7rem;
+  height: 1.7rem;
+  margin: 0rem;
+}
+
+#onsession .buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 4.7rem;
+  height: 1.7rem;
+  margin: 0rem;
+}

@@ -1,14 +1,17 @@
 import React, { useState, useContext } from 'react';
 import Imagem from '../imgsoftex/imagem';
+import { useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../contexts/auth';
 
 import "./styles.css";
+import "./stylebuttons.css";
 
 const LoginPage = () => {
-const { authenticated, login } = useContext
-  (AuthContext);
+  const { authenticated, login, logout } = useContext
+    (AuthContext);
 
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,6 +22,42 @@ const { authenticated, login } = useContext
     login(email, password);
   }
 
+  const handleLogout = () => {
+    logout();
+  }
+
+  const navigateP = () => {
+    navigate("/");
+  }
+
+  const isLogged = () => {
+    let htmlElement;
+    if (Boolean(authenticated) === true) {
+      htmlElement = <div id='onsession'>
+        <div className='tittleon'>Sessão já iniciada!</div>
+        <div className='buttons'>
+          <div className='buttonlogout'>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+          <div className='buttonhomepage'>
+            <button onClick={navigateP}>HomePage</button>
+          </div>
+        </div>
+      </div>;
+    }
+    else {
+      htmlElement = <div id='offsession'>
+        <div className='tittleoff'>Iniciar sessão abaixo!</div>
+      </div>;
+    }
+    return (
+      <div>
+        {htmlElement}
+      </div>
+    );
+
+  };
+
   return (
     <div id="login">
       <a
@@ -28,7 +67,7 @@ const { authenticated, login } = useContext
         <Imagem />
       </a>
       <h1 className='title'>Mídia Indoor</h1>
-      <p>{String(authenticated)}</p>
+      <div className='sessionstatus'>{isLogged()}</div>
       <form className='form' onSubmit={handleSubmit}>
         <div className='field'>
           <label htmlFor="Email">Email</label>
