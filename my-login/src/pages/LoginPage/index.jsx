@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Imagem from '../imgsoftex/imagem';
+
+import { AuthContext } from '../../contexts/auth';
 
 import "./styles.css";
 
 const LoginPage = () => {
+const { authenticated, login } = useContext
+  (AuthContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('submit', { email, password })
+    console.log('submit', { email, password });
+    login(email, password);
   }
 
   return (
@@ -22,6 +28,7 @@ const LoginPage = () => {
         <Imagem />
       </a>
       <h1 className='title'>Mídia Indoor</h1>
+      <p>{String(authenticated)}</p>
       <form className='form' onSubmit={handleSubmit}>
         <div className='field'>
           <label htmlFor="Email">Email</label>
