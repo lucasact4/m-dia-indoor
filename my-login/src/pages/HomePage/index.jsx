@@ -35,11 +35,11 @@ const HomePage = () => {
           </div>
         </div>
       </header>
-      <main>
-        <p>Página main</p>
+      <main className='main'>
+        <p>main</p>
       </main>
-      <footer>
-        <p>Página footer</p>
+      <footer className='footer'>
+        <p>footer</p>
       </footer>
     </div>
   );

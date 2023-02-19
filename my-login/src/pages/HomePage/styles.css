@@ -77,3 +77,13 @@
   height: 2.2rem;
   margin: 0rem;
 }
+
+#homepage .main {
+  min-height: 100vh;
+}
+
+#homepage .footer {
+  min-width: 100vh;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
