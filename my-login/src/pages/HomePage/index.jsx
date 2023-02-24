@@ -36,10 +36,10 @@ const HomePage = () => {
         </div>
       </header>
       <main className='main'>
-        <p>main</p>
+        <div>main</div>
       </main>
       <footer className='footer'>
-        <p>footer</p>
+        <div>footer</div>
       </footer>
     </div>
   );
