@@ -1,2 +1,2 @@
 # mídia-indoor
-Softex Project Mídia Indoor with React App
+Basic Project Mídia Indoor with React App
